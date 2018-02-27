@@ -1,0 +1,12 @@
+timestamp: 1489126243.0
+
+_extend=_buf.extend;_to_str=to_str;_escape=escape; _extend(('''<h2>''', _escape(_to_str(title)), '''</h2>
+<table>\n''', ));
+i = 0
+for item in items:
+    i += 1
+    klass = i % 2 and 'odd' or 'even'
+    _extend(('''  <tr class="''', _to_str(klass), '''">
+    <td>''', _escape(_to_str(item)), '''</td>
+  </tr>\n''', ));
+#endfor

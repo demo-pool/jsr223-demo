@@ -1,0 +1,10 @@
+<h2>${title}</h2>
+<table>
+  <?py i = 0 ?>
+  <?py for item in items: ?>
+  <?py     i += 1 ?>
+  <?py     klass = i % 2 and 'odd' or 'even' ?> 
+  <tr class="#{klass}">
+    <td>${item}</td>
+  </tr>
+  <?py #endfor ?>
